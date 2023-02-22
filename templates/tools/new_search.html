@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h6 class="search_item"><span>You Search :- </span>{{ search | title }}</h6>
+
+<div class="data">
+    <div class="content">
+        <p><span>Website Title :- </span> {{title}}</p><br>
+        <p><span>Website Description :- </span> {{desc}}</p><br>
+        <p><span>Website Keywords :- </span> {{keyword}}</p>
+    </div>
+</div>
+{% endblock content %}

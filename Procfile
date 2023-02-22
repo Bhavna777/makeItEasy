@@ -1,0 +1,1 @@
+web: gunicorn MakeItEasy.wsgi --timeout 600 --keep-alive 600 --log-level debug

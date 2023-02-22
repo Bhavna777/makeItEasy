@@ -1,0 +1,24 @@
+*{
+    margin: 0px;
+    padding: 0px;
+  }
+
+
+.search_item{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.search_item span{
+    font-weight: bold;
+}
+
+.content{
+    margin-top: 100px !important;
+    margin-left: 170px;
+    margin-right: 150px !important;
+}
+
+.content span{
+    font-weight: bold;
+}

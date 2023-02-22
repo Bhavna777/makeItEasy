@@ -1,0 +1,55 @@
+
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "style.css" %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>MakeItEasy</title>
+</head>
+
+<body>
+    <nav>
+        <div class="container nav-wrapper">
+          <a href="/" class="brand-logo"><i class="brand-logo">MakeItEasy</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#"><i class="material-icons">search</i></a></li>
+            <li><a href="#"><i class="material-icons">view_module</i></a></li>
+            <li><a href="#"><i class="material-icons">refresh</i></a></li>
+            <li><a href="#"><i class="material-icons">more_vert</i></a></li>
+          </ul>
+        </div>
+    </nav>
+    
+    <div class="main">
+        <div class = "container">
+            <h1>Search here...  </h1>
+        </div>
+        <div class="container">
+            <form action="{% url 'web_search' %}" method="post">
+                {% csrf_token %}
+                <input type="text" name="search" placeholder="search" style="text-align: center">
+                <button class="btn waves-effect waves-light" type="submit" name="action">Find Now
+                    <i class="material-icons right">send</i>
+                </button>
+            </form>
+        </div>
+
+        {% block content %}
+
+        {% endblock content %}
+
+        
+    </div>
+    
+    
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
